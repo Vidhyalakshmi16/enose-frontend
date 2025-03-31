@@ -16,7 +16,7 @@ const Dashboard = () => {
 
     const fetchSensorData = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/sensor-data");
+            const response = await axios.get("https://enose-backend.onrender.com/api/sensor-data");
             const newData = response.data.data;
             setSensorData(newData);
             setError(null);
