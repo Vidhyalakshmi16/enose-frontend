@@ -1,0 +1,190 @@
+/* Full-screen background */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/premium-photo/search-bar-icon-search-3d-render-minimal-design-multicolor-background_41204-14866.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Modern glassmorphism effect with black styling */
+.dashboard-box {
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    width: 90%;
+    max-width: 750px;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header Styling */
+.dashboard-box h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Sensor Data Container */
+.sensor-data {
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Data Card */
+.data-card {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.date-header {
+    color: white !important; 
+    font-weight: bold;
+    font-size: 1rem; /* Adjust size if needed */
+}
+/* Data Titles */
+.data-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Timestamp */
+.timestamp {
+    font-size: 0.9rem;
+    color: white;  /* ✅ Corrected */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Button Styling */
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #dddddd;
+    transform: translateY(-2px);
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #ff4444;
+}
+
+.logout-button:hover {
+    background-color: #cc0000;
+}
+
+/* Scrollbar Styling */
+.sensor-data::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sensor-data::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+.sensor-data::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Error and No Data Messages */
+.error-message, .no-data {
+    color: #ff4444; /* Red color for errors */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .dashboard-box {
+        width: 95%;
+        padding: 20px;
+        min-height: 65vh;
+    }
+
+    .dashboard-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .data-card h3 {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .sensor-data {
+        max-height: 250px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dashboard-box {
+        width: 98%;
+        padding: 15px;
+        min-height: 60vh;
+    }
+
+    .dashboard-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .data-card h3 {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .sensor-data {
+        max-height: 200px;
+        padding: 8px;
+    }
+}
